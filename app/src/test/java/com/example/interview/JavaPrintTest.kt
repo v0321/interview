@@ -2,23 +2,13 @@ package com.example.interview
 
 import org.junit.Test
 
-import org.junit.Assert.*
 import kotlin.concurrent.thread
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * See [testing documentation](http://d.android.com/tools/testing).
- */
-class ExampleUnitTest {
-    @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
-    }
+class JavaPrintTest {
 
     @Test
     fun `print pairs`() {
-        val fisher = Fisher()
+        val fisher = JavaFisher()
         val maxCount = 10
         val threads = listOf(
             thread(start = false) {

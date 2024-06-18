@@ -12,10 +12,10 @@ class Fisher {
     }
 
     fun printRight() {
-        print('>')
+        printChar('>')
     }
 
     fun printDash() {
-        print('_')
+        printChar('_')
     }
 }
