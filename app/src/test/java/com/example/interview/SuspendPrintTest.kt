@@ -1,5 +1,6 @@
 package com.example.interview
 
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.joinAll
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
@@ -13,19 +14,19 @@ class SuspendPrintTest {
         val fisher = SuspendFisher()
         val maxCount = 10
 
-        launch {
+        launch(Dispatchers.IO) {
             for (i in 1..maxCount) {
                 fisher.printLeft()
             }
         }
 
-        launch {
+        launch(Dispatchers.IO) {
             for (i in 1..maxCount) {
                 fisher.printRight()
             }
         }
 
-        launch {
+        launch(Dispatchers.IO) {
             for (i in 1..maxCount) {
                 fisher.printDash()
             }
